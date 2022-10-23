@@ -1,0 +1,1 @@
+DTOs are queries data transfer objects for the invocation of the application command
