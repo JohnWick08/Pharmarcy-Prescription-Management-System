@@ -4,7 +4,7 @@ Feature: Prepare Prescription Fill
     And medicine is in stock
     And the clinical check of the medication is verified
     And the refill number is non-zero
-    When the prepare prescription fill command is invoked
+    When the application command preparePrescriptionDill is invoked
     Then record the lot number of medicine
     And record the expire date of medicine
     And set the fill as verified
@@ -19,7 +19,7 @@ Feature: Prepare Prescription Fill
     And the clinical check of the medication is verified
     And the refill number is non-zero
     And refill is authorized
-    When the prepare prescription fill command is invoked
+    When the application command preparePrescriptionDill is invoked
     Then record the lot number of medicine
     And record the expire date of medicine
     And set the fill as verified
