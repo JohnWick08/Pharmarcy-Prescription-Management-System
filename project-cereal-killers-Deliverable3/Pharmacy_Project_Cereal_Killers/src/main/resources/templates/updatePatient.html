@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Update Patient</h1>
+<form action="#" th:action="@{/updatePatient}" th:object="${newPatient}" method="post">
+    <p>identificationnumber: <input type="text" th:field="*{identificationnumber}" /></p>
+    <p>firstName: <input type="text" th:field="*{firstname}" /></p>
+    <p>lastName: <input type="text" th:field="*{lastname}" /></p>
+    <p>address: <input type="text" th:field="*{address}" /></p>
+    <p>gender: <input type="text" th:field="*{gender}" /></p>
+    <p>dateOfBirth: <input type="text" th:field="*{dateofbirth}" /></p>
+    <p>languagePreference: <input type="text" th:field="*{languagepreference}" /></p>
+    <p>drugAllergies: <input type="text" th:field="*{drugallergies}" /></p>
+    <p>currentMedications: <input type="text" th:field="*{currentmedications}" /></p>
+    <p>insuranceNumber: <input type="text" th:field="*{insurancenumber}" /></p>
+    <p><input type="submit" value="Update" /> </p>
+</form>
+</body>
+</html>

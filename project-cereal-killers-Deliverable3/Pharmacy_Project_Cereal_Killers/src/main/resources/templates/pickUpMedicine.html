@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/pickUpMedicine}" th:object="${pickForm}" method="post">
+    <p>Prescription Fill id: <input type="text" required="required" th:field="*{prescriptionFillId}" /></p>
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>

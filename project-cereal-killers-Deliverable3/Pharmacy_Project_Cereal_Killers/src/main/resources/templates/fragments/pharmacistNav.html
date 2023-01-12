@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "/>
+  <link href="../static/css/style.css" rel="stylesheet"
+        th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div class = "col" th:fragment="pharmacistNav">
+  <nav class="nav flex-column">
+    <a class="nav-link account-btn" href="createPatient.html"
+       id="create-patient-btn" type="button"
+       th:href="@{/createPatient}"> Create Patient</a>
+
+    <a class="nav-link account-btn" href="pickUpMedicine.html"
+       id="pick-up-medicine-btn" type="button"
+       th:href="@{/pickUpMedicine}"> Pick Up Medicine</a>
+
+    <a class="nav-link account-btn" href="generateDrugReport.html"
+       id="generate-drug-report-btn" type="button"
+       th:href="@{/generateDrugReport}"> Generate Drug Report</a>
+
+    <a class="nav-link account-btn" href="createPrescriptionFill.html"
+       id="prepare-prescription-fill" type="button"
+       th:href="@{/createPrescriptionFill}"> Prepare Prescription Fill</a>
+
+    <a class="nav-link account-btn" href="updatePharmacist.html"
+       id="update-pharmacist-fill" type="button"
+       th:href="@{/updatePharmacist}">Update Pharmacist</a>
+
+    <a class="nav-link account-btn" href="deletePatient.html"
+       id="delete-patient-btn" type="button"
+       th:href="@{/deletePatient}"> Delete Patient</a>
+
+    <a class="nav-link account-btn" href="login.html"
+       id="logout-btn" type="button"
+       th:href="@{/logout}"> Log out</a>
+  </nav>
+</div>
+</body>
+</html>

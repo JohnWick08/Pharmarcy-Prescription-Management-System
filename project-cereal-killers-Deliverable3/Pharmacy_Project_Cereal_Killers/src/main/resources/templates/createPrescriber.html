@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Handling Form Submission</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Create Prescriber</h1>
+<form action="#" th:action="@{/createPrescriber}" th:object="${newPrescriber}" method="post">
+  <p>Email: <input type="text" required="required" th:field="*{email}" /></p>
+  <p>Name: <input type="text" required="required" th:field="*{name}" /></p>
+  <p>Licence Number: <input type="text" required="required" th:field="*{licencenumber}" /></p>
+  <p>Title: <input type="text" th:field="*{title}" /></p>
+  <p>Address: <input type="text" th:field="*{address}" /></p>
+  <p>TelephoneNumber: <input type="text" th:field="*{telephonenumber}" /></p>
+  <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+
+</body>
+</html>

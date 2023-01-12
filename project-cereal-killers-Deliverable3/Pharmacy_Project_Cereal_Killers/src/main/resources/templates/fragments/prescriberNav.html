@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "/>
+  <link href="../static/css/style.css" rel="stylesheet"
+        th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div class = "col" th:fragment="prescriberNav">
+  <nav class="nav flex-column">
+    <a class="nav-link account-btn" href="createPrescription.html"
+       id="create-prescription-btn" type="button"
+       th:href="@{/createPrescription}"> Create Prescription</a>
+
+    <a class="nav-link account-btn" href="updatePrescriber.html"
+       id="update-prescriber-btn" type="button"
+       th:href="@{/updatePrescriber}"> Update Prescriber</a>
+
+      <a class="nav-link account-btn" href="login.html"
+         id="logout-btn" type="button"
+         th:href="@{/logout}"> Log out</a>
+
+  </nav>
+</div>
+</body>
+</html>

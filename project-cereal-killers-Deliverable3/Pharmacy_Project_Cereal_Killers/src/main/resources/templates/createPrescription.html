@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Create Prescription</h1>
+<form action="#" th:action="@{/createPrescription}" th:object="${newPrescription}" method="post">
+    <p>Patient ID: <input type="text" required="required" th:field="*{patientid}" /></p>
+    <p>Start Date: <input type="text" name="startDate" required="required"  th:field="*{startdate}" /></p>
+    <p>End Date: <input type="text" name= "endDate"required="required"  th:field="*{enddate}" /></p>
+    <p>Medicine DIN: <input type="text" required="required" th:field="*{medicinedin}" /></p>
+    <p>Medicine Name: <input type="text" required="required" th:field="*{medicinename}" /></p>
+    <p>Medicine Strength: <input type="text" required="required" th:field="*{medicinestrength}" /></p>
+    <p>Medicine Amount: <input type="text" required="required" th:field="*{medicineamount}" /></p>
+    <p>Method Of Administration: <input type="text" required="required" th:field="*{methodofadministration}" /></p>
+    <p>Frequency Of Administration: <input type="text" required="required" th:field="*{frequencyofadministration}" /></p>
+    <p>Optional Considerations: <input type="text"  th:field="*{optionalconsiderations}" /></p>
+    <p>Refillable Count: <input type="text" required="required" th:field="*{refillablecount}" /></p>
+    <p>authorizationFiled:
+<!--        <input type="text"  th:field="*{authorizationfiled}" />-->
+        <select th:field="*{authorizationfiled}">
+            <option value="1">true</option>
+            <option value="0">false</option>
+        </select>
+    </p>
+    <p>isVerified:
+<!--        <input type="text"  th:field="*{isverified}" />-->
+        <select th:field="*{isverified}">
+            <option value="1">true</option>
+            <option value="0">false</option>
+        </select>
+    </p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+
+
+</body>
+
+<script>
+    $('input[type="date"]').change(function(){
+        alert(this.value.split("-").join("/"));
+    });
+
+</script>
+</html>
